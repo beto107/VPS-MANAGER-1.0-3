@@ -88,7 +88,7 @@ fun_botOnOff() {
             sed -i "s/!#link3/$link3/g" $HOME/BOT/botssh >/dev/null 2>&1
             sed -i "s/!#dtempo/$dtempo/g" $HOME/BOT/botssh >/dev/null 2>&1
             cd $HOME/BOT
-            screen -dmS bot_teste ./botssh $token >/dev/null 2>&1
+            screen -dmS bot_teste ./botssh $token $bvindo $mfinal $bt1 $bt2 $link2 $bt3 $link3 $dtempo >/dev/null 2>&1
             [[ $(grep -wc "bot_teste" /etc/autostart) = '0' ]] && {
                 echo -e "ps x | grep 'bot_teste' | grep -v 'grep' || cd $HOME/BOT && sudo screen -dmS bot_teste ./botssh $token $bvindo $mfinal $bt1 $bt2 $link2 $bt3 $link3 $dtempo && cd $HOME" >>/etc/autostart
             } || {
