@@ -89,9 +89,9 @@ echo -e "\n\033[0;34m═══════════════════�
 echo ""
 tput setaf 2 ; tput bold ; read -p "Opção ?: " -e -i 1 optiondb ; tput sgr0
 } || {
-awk -F : '$3 >= 1000 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
+awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 }
-[[ "$optiondb" = '2' ]] && awk -F : '$3 >= 1000 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
+[[ "$optiondb" = '2' ]] && awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 clear
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " AGUARDE A INSTALAÇÃO" ; tput sgr0
 echo ""
