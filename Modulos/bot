@@ -920,7 +920,7 @@ fun_add_teste() {
 }
 
 fun_teste() {
-    usuario=$(echo teste$((RANDOM % +500)))
+    usuario=$(echo TESTE$((RANDOM % +500)))
     senha='1234'
     limite='1'
     t_time=$1
