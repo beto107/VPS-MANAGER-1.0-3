@@ -83,8 +83,8 @@ ShellBot.regHandleFunction --function pix --callback_data pay
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'botao1')"
 while :; do
-   [[ "$(date +%d)" != "$(cat RESET)" ]] && {
-   	echo $(date +%d) > RESET
+   [[ "$(date +%d +5days)" != "$(cat RESET)" ]] && {
+   	echo $(date +%d +5days) > RESET
    	echo ' ' > lista
    }
   ShellBot.getUpdates --limit 100 --offset $(ShellBot.OffsetNext) --timeout 30
