@@ -13,7 +13,7 @@ menu() {
 
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=\n"
-        msg+="<b>•🔹• BOT SSH 30 DIAS •🔹•</b>\n"
+        msg+="<b>•🔹• BOT CONTA SSH •🔹•</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
