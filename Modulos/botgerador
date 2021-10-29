@@ -42,7 +42,7 @@ criarssh30() {
     
   if [[ "$(grep -wc $usuario /etc/passwd)" != '0' ]]; then
       ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-        --text "TENTE NOVAMENTE"
+        --text "CONTA GERADA JA EXISTE! TENTE NOVAMENTE"
       return 0
     
   else
